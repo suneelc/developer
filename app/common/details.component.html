@@ -1,0 +1,25 @@
+    
+<div class="dtl-section section">
+    <div class="dtl-header section"> Developer Details
+      <div class="search">
+        <input type="text" name="search" title="Search" (blur)="searchOut($event)" alt="Search" placeholder="Search" id="search" maxLength="30" ref="devSearch" />
+      </div>
+      <a id="searchbtn" href="/search?srh=" (click)="searchClick($event)" ></a></div>
+    <table id="details">
+      <thead>
+        <tr>
+          <td>User</td><td>Phone</td><td>Emp. ID</td><td>Project</td><td>Location</td><td>Designation</td><td width="50">controls</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="#tableItem of items">
+         <td>{{tableItem.name}}</td><td>{{tableItem.phone}}</td><td>{{tableItem.empid}}</td><td>{{tableItem.project}}</td><td>{{tableItem.location}}</td><td>{{tableItem.designation}}</td>
+          <td><a class="edit" title="edit the developer details" (click) = "populateData($event)">{{tableItem._id}}</a><a class="view-more" title="view more developer details" (click) = "populateData($event)" >{{tableItem._id}}</a><a  class="delete" title="delete the developer details" (click) = "deleteEvt($event)" ></a></td>
+		</tr>
+      </tbody>
+    </table>
+    
+<div class="paging">Paging:
+<!--{pgns.map(function(itm, i){ return ( <a href={"/pgn?page="+itm.itm+"&size=10"} onClick={pagingEvt} key={i}>{itm.itm}</a> ) })}-->
+</div>
+  </div>

@@ -1,0 +1,16 @@
+<div class="cogn-header">
+  <h2> DEVELOPER INFORMATION (APPLICATION) WITH ANGULAR 02</h2><div class="links"><a href="/angular">ANGULAR</a></div>
+  <div class="cogn-nav"><a href="/">HOME</a></div>
+</div>
+<div class="cgn-content">
+<div id="dev-main">
+<div>
+		<detail [items]="devs.entries" (populate)="populateCnt($event)"></detail>
+        <view [views]="view"></view>
+		<user [devs]="user"></user>
+		<div class="progress section"></div>
+</div>
+</div>
+</div>
+<div class="cogn-footer"></div>
+
